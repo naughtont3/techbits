@@ -2,6 +2,7 @@
  * Testing with something like this:
  *
  *     bash:$ numactl --physcpubind=7 ./hello-hwloc
+ *     bash:$ numactl --physcpubind=3,4,5,8 ./hello-hwloc 
  *
  * References:
  *  - 2012 HWLoc tutorial for guide
