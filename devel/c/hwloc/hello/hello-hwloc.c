@@ -66,6 +66,7 @@ int main (int argc, char **argv)
 
 	/* retrieve the CPU binding of the current entire process */
 	hwloc_get_cpubind(topo, set, flags | HWLOC_CPUBIND_PROCESS);
+	//hwloc_get_cpubind(topo, set, flags | HWLOC_CPUBIND_THREAD);
 
     /* set = hwloc_bitmap_dup(obj->cpuset); */
     hwloc_bitmap_asprintf(&str, set);
