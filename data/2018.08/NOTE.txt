@@ -1,4 +1,0 @@
-TJN NOTES
----------
- - Testing upstairs access point from Chromebook
-   (initial set of `2018.08.05-t3_chromebook*` data from Livingroom/chair)

@@ -1,8 +1,0 @@
-Iperf-Transfer-sender: 1.97 MBytes
-Iperf-Bandwidth-sender: 1.65 Mbits/sec
-Ping-pkts-transmit: 20
-Ping-pkts-receive: 20
-Ping-packet-loss: 0%
-Ping-rtt-avg: 92.932
-Ping-rtt-max: 135.706
-Ping-rtt-mdev: 11.602
