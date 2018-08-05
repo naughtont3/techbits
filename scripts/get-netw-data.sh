@@ -22,6 +22,7 @@ IPERF_VER=`$IPERF -v`
 PING_VER=`$PING -V`
 
 TST_COUNT=0
+MAX_TRY=5
 
 ######################################
 
@@ -30,6 +31,7 @@ TST_COUNT=0
 #
 do_iperf_test () {
     server=$1
+    num_try=$MAX_TRY
 
     iperf_cmd="$IPERF -c $server"
 
@@ -37,10 +39,26 @@ do_iperf_test () {
     echo "# INFO-IPERF: CMD='$iperf_cmd'"
 
     TST_COUNT=$((TST_COUNT + 1))
+
     echo "# ----------------------------------------------------------------"
     echo "# TEST-BEGIN: COUNT=$TST_COUNT" 
 
-    $iperf_cmd
+    while [[ $num_try > 0 ]] ; do
+
+        num_try=$((num_try - 1))
+
+        $iperf_cmd
+        rc=$?
+
+        if [[ $rc == 0 ]] ; then
+            num_try=0
+        else
+            nsec=$((2 * num_try))
+            echo "# INFO: Sleep $nsec, then retry..."
+            sleep $nsec
+        fi
+
+    done
 
     echo "# TEST-END: COUNT=$TST_COUNT" 
     echo "# ----------------------------------------------------------------"
@@ -97,9 +115,9 @@ echo "#=================================================================="
 # 
 # Tests
 #
-#do_iperf_test iperf.scottlinux.com
+do_iperf_test iperf.scottlinux.com
 
-#do_ping_test iperf.scottlinux.com
+do_ping_test iperf.scottlinux.com
 
 
 
