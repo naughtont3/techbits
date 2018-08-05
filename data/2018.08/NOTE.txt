@@ -1,0 +1,3 @@
+TJN NOTES
+---------
+ - Testing upstairs access point from Chromebook

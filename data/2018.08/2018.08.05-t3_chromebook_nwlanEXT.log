@@ -1,0 +1,64 @@
+# ------------------------------------------------------------------
+#==================================================================
+# INFO-HOST: HOST=localhost
+# INFO-HOST: IP=192.168.1.174
+# INFO-HOST: OS_VER=Linux
+# INFO-HOST: KERN_VER=3.18.0-17028-g3f022007a1b8
+#==================================================================
+# INFO-IPERF: SERVER=iperf.scottlinux.com
+# INFO-IPERF: CMD='iperf3 -c iperf.scottlinux.com'
+# ----------------------------------------------------------------
+# TEST-BEGIN: COUNT=1
+Connecting to host iperf.scottlinux.com, port 5201
+[  4] local 192.168.1.174 port 42347 connected to 45.33.39.39 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec   124 KBytes  1.02 Mbits/sec    0   45.2 KBytes       
+[  4]   1.00-2.00   sec   608 KBytes  4.96 Mbits/sec    0   65.0 KBytes       
+[  4]   2.00-3.00   sec  1021 KBytes  8.39 Mbits/sec    0    112 KBytes       
+[  4]   3.00-4.00   sec  1.43 MBytes  12.0 Mbits/sec    0    174 KBytes       
+[  4]   4.00-5.00   sec  1.35 MBytes  11.3 Mbits/sec    0    247 KBytes       
+[  4]   5.00-6.00   sec  1.48 MBytes  12.4 Mbits/sec    0    317 KBytes       
+[  4]   6.00-7.00   sec  1.88 MBytes  15.8 Mbits/sec    0    393 KBytes       
+[  4]   7.00-8.00   sec  1.43 MBytes  11.9 Mbits/sec    0    474 KBytes       
+[  4]   8.00-9.00   sec  1.75 MBytes  14.6 Mbits/sec    0    553 KBytes       
+[  4]   9.00-10.00  sec   928 KBytes  7.60 Mbits/sec    0    619 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-10.00  sec  11.9 MBytes  10.0 Mbits/sec    0             sender
+[  4]   0.00-10.00  sec  10.6 MBytes  8.89 Mbits/sec                  receiver
+
+iperf Done.
+# TEST-END: COUNT=1
+# ----------------------------------------------------------------
+# INFO-PING: SERVER=iperf.scottlinux.com
+# INFO-PING: COUNT=20
+# INFO-PING: CMD='iperf3 -c iperf.scottlinux.com'
+# ----------------------------------------------------------------
+# TEST-BEGIN: COUNT=2
+PING iperf.scottlinux.com (45.33.39.39) 56(84) bytes of data.
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=1 ttl=48 time=81.8 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=2 ttl=48 time=85.3 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=3 ttl=48 time=88.6 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=4 ttl=48 time=95.8 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=5 ttl=48 time=86.6 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=6 ttl=48 time=85.5 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=7 ttl=48 time=85.8 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=8 ttl=48 time=84.3 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=9 ttl=48 time=99.6 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=10 ttl=48 time=85.9 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=11 ttl=48 time=87.1 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=12 ttl=48 time=85.7 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=13 ttl=48 time=92.0 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=14 ttl=48 time=90.1 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=15 ttl=48 time=84.8 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=16 ttl=48 time=84.1 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=17 ttl=48 time=85.7 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=18 ttl=48 time=89.3 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=19 ttl=48 time=94.6 ms
+64 bytes from iperf.scottlinux.com (45.33.39.39): icmp_seq=20 ttl=48 time=87.2 ms
+
+--- iperf.scottlinux.com ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19029ms
+rtt min/avg/max/mdev = 81.873/88.036/99.651/4.350 ms
+# TEST-END: COUNT=2
+# ----------------------------------------------------------------
